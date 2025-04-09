@@ -53,7 +53,6 @@ public class HlavniProgram {
         zofka.penUp();
     }
 
-
     public void nakresliMnohouhlenik(double delkaStrany, double uhel) {
         zofka.turnLeft(uhel);
         for (int i = 0; i <= 360 / uhel - 1; i++) {
