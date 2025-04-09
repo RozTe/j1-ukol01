@@ -14,7 +14,7 @@ public class HlavniProgram {
 
         nakresliPrasatko();
 
-        /*zofka.move(300);
+        zofka.move(300);
         zofka.turnLeft(90);
         zofka.move(300);
         zofka.turnRight(90);
@@ -33,11 +33,11 @@ public class HlavniProgram {
         zofka.move(220);
         zofka.turnLeft(90);
 
-        nakresliSlunicko(30);*/
+        nakresliSlunicko(30);
 
     }
 
-   /* public void nakresliSlunicko(double delkaStrany) {
+    public void nakresliSlunicko(double delkaStrany) {
         //dvanactiuhelnik - uhel mezi stranami 30
         for (int i = 0; i <= 12 - 1; i++) {
 
@@ -66,7 +66,7 @@ public class HlavniProgram {
         zofka.turnRight(uhel);
     }
 
-*/
+
     public void nakresliPrasatko() {
         nakresliObdelnik(200, 150);
         nakresliVecko(150);
