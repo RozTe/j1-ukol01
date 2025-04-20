@@ -12,14 +12,56 @@ public class HlavniProgram {
     public void start() {
         zofka = new Turtle();
 
+        zofka.penUp();
+        zofka.turnRight(180);
+        zofka.move(300);
+        zofka.turnLeft(90);
+        zofka.move(300);
+        zofka.turnLeft(90);
+        zofka.penDown();
+// posune zofku nekam doprostred
+
         nakresliPrasatko();
+        zofka.turnRight(90);
+        zofka.move(250);
+        zofka.turnLeft(90);
+        zofka.move(150);
+        zofka.turnRight(90);
+        nakresliDomecek();
+
+        zofka.penUp();
+        zofka.move(350);
+        zofka.turnRight(90);
+        zofka.move(100);
+        zofka.turnLeft(90);
+
+        zofka.turnRight(90);
+        zofka.penDown();
+
+        nakresliUlici();
+
+        zofka.turnLeft(180);
+        zofka.move(350);
+        zofka.turnLeft(90);
+        zofka.move(150);
+        zofka.turnLeft(90);
+        zofka.turnRight(90);
+        nakresliDomecek();
+
+        zofka.move(500);
+        zofka.turnRight(90);
+        zofka.move(100);
+        nakresliSlunicko(15);
+        zofka.turnLeft(90);
+
+       /*nakresliPrasatko();
 
         zofka.move(300);
         zofka.turnLeft(90);
         zofka.move(300);
         zofka.turnRight(90);
 
-        nakresliMnohouhlenik(50, 45);
+        nakresliMnohouhlenik(50,45);
 
         zofka.turnRight(90);
         zofka.move(120);
@@ -33,8 +75,21 @@ public class HlavniProgram {
         zofka.move(220);
         zofka.turnLeft(90);
 
-        nakresliSlunicko(30);
+        nakresliSlunicko(30);*/
 
+
+    }
+
+    public void nakresliUlici() {
+        for (int i = 0; i < 5; i++) {
+            nakresliDomecek();
+
+            zofka.turnLeft(90);
+            zofka.move(50);
+            zofka.turnLeft(180);
+
+        }
+        zofka.turnLeft(90);
     }
 
     public void nakresliSlunicko(double delkaStrany) {
@@ -54,7 +109,7 @@ public class HlavniProgram {
         zofka.penUp();
     }
 
-    public void nakresliMnohouhlenik(double delkaStrany, double uhel) {
+    /*public void nakresliMnohouhlenik(double delkaStrany, double uhel) {
         zofka.turnLeft(uhel);
         for (int i = 0; i <= 360 / uhel - 1; i++) {
 
@@ -64,16 +119,16 @@ public class HlavniProgram {
         }
         zofka.penUp();
         zofka.turnRight(uhel);
-    }
+    }*/
 
 
     public void nakresliPrasatko() {
-        nakresliObdelnik(200, 150);
-        nakresliVecko(150);
+        nakresliObdelnik(150, 100);
+        nakresliVecko(100);
         nakresliNozicky();
         zofka.penUp();
         zofka.turnRight(90);
-        zofka.move(200);
+        zofka.move(150);
         zofka.turnLeft(90);
         zofka.penDown();
         nakresliNozicky();
@@ -119,5 +174,11 @@ public class HlavniProgram {
         // pri pouziti na nozicky to moc nefunguje - spatne se hleda startovaci bod
     }
 
+    public void nakresliDomecek() {
+
+        nakresliObdelnik(150, 100);
+        nakresliVecko(100);
+        zofka.turnLeft(90);
+    }
 }
 
